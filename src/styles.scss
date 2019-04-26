@@ -1,0 +1,62 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+@import 'assets/scss/variables';
+@import 'assets/scss/fonts';
+@import 'assets/scss/text';
+@import 'assets/scss/animations/anim-home';
+
+body {
+  background-color: $black;
+  color: $white;
+  font-family: 'SamsungSharpSans', sans-serif;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+}
+a {
+  color: $white;
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+.cp {
+  cursor: pointer;
+}
+.tr-o {
+  transition: opacity ease-out .3s;
+  &:hover {
+    opacity: .6;
+  }
+}
+main {
+  position: absolute;
+  height: calc(100% - 66px);
+  width: 100%;
+  margin-top: 66px;
+  overflow: hidden;
+}
+.flex {
+  @each $prefix in "-webkit-", "-moz-", "-ms-", "-o-", "" {
+    #{unquote($prefix)}display: flex;
+  }
+}
+
+.wrapper {
+  max-width: 1140px;
+  display: block;
+  margin: auto;
+  width: calc(100% - 160px);
+  padding: 0 80px;
+  @media screen and (max-width: 780px) {
+    width: calc(100% - 80px);
+    padding: 0 40px;
+  }
+  @media screen and (max-width: 470px) {
+    width: calc(100% - 40px);
+    padding: 0 20px;
+  }
+}

@@ -1,0 +1,274 @@
+.container.home {
+  height: 100%;
+  position: relative;
+
+  .bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    background-image: url('../../assets/images/skeaper.png');
+    opacity: 0;
+    background-size: 200%;
+    background-repeat: no-repeat;
+
+    @media screen and (max-width: 780px) {
+      background-image: url('../../assets/images/skeaper2.png');
+    }
+  }
+
+  .wrapper {
+    position: relative;
+    z-index: 1;
+    transition: height ease-out .3s;
+    @media screen and (max-width: 780px) {
+      height: 100%;
+    }
+  }
+
+  .content {
+    width: 100%;
+    @media screen and (min-width: 781px) {
+      top: 50%;
+      @each $prefix in "-webkit-", "-moz-", "-ms-", "-o-", "" {
+        #{unquote($prefix)}transform: translateY(-50%);
+      }
+      position: absolute;
+    }
+    @media screen and (max-width: 780px) {
+      height: 100%;
+    }
+  }
+
+  .title {
+    display: inline-block;
+  }
+
+  h2 span {
+    display: block;
+    opacity: 0;
+  }
+
+  h2 {
+    transition: top ease-out .3s, font-size ease-out .3s;
+    @media screen and (max-width: 780px) {
+      position: absolute;
+      top: 165px;
+
+      @media screen and (max-height: 700px) {
+        top: 100px;
+        font-size: 39px;
+        line-height: 39px;
+      }
+    }
+    @media screen and (max-width: 380px) {
+      font-size: 39px;
+      line-height: 39px;
+    }
+  }
+
+  .container-load {
+    position: absolute;
+    transform: translate(400px, 40px) rotate(-95deg);
+    pointer-events: none;
+    opacity: 0;
+    svg {
+      height: 40px;
+      width: 40px;
+      display: block;
+    }
+  }
+
+  ul {
+    justify-content: flex-end;
+    align-items: center;
+    opacity: 0;
+    transition: margin ease-out .3s, position ease-out .3s, width ease-out .3s, jusity-content ease-out .3s;
+
+    @media screen and (min-width: 781px) {
+      margin-top: 35px;
+      margin-bottom: 114px;
+    }
+    @media screen and (max-width: 780px) {
+      position: absolute;
+      justify-content: space-between;
+      bottom: 40px;
+      width: calc(100% - 80px);
+    }
+    @media screen and (max-width: 470px) {
+      width: calc(100% - 40px);
+      li:not(:last-of-type) {
+        margin-right: 10px;
+      }
+      img {
+        height: 12px;
+        width: auto;
+      }
+    }
+  }
+
+  .bottom {
+    align-items: flex-end;
+    position: relative;
+    transition: top ease-out .3s;
+    justify-content: space-between;
+    opacity: 0;
+
+    @media screen and (max-width: 780px) {
+      position: absolute;
+      top: 413px;
+      z-index: 2;
+      @media screen and (max-height: 700px) {
+        top: 300px;
+      }
+    }
+    h3 {
+      max-width: 222px;
+      @media screen and (max-width: 780px) {
+        min-width: 157px;
+        width: 157px;
+        font-size: 12px;
+      }
+    }
+    h4 span {
+      display: block;
+    }
+    h4 {
+      margin-left: 58px;
+      @media screen and (max-width: 900px) {
+        margin-left: 20px;
+      }
+    }
+    h4, h4:first-of-type span {
+      transition: opacity ease-out .3s;
+    }
+    .line {
+      height: 1px;
+      display: block;
+      flex-grow: 1;
+      margin-left: 58px;
+      margin-bottom: 6px;
+      overflow: hidden;
+      &:before {
+        content: '';
+        display: block;
+        width: 0;
+        height: 1px;
+        background-color: #898989;
+      }
+      @media screen and (max-width: 1024px) {
+        display: none;
+      }
+    }
+    @media screen and (max-width: 780px) {
+      h4:not(:first-of-type) {
+        opacity: 0;
+        pointer-events: none;
+      }
+      h4:first-of-type  {
+        height: 55px;
+        border-radius: 2px;
+        box-shadow: 0 2px 24px 0 rgba(0, 0, 0, 0.5);
+        background-color: #ffffff;
+        color: #000000;
+        text-align: center;
+        line-height: 55px;
+        letter-spacing: 1.2px;
+        display: block;
+        margin-left: 21px;
+        .t-18 {
+          font-size: 12px;
+          font-family: Nexa, sans-serif;
+          font-weight: bold;
+          width: 124px;
+          &:after {
+            content: '';
+            height: 14px;
+            width: 8px;
+            display: inline-block;
+            background-size: contain;
+            background-position: center;
+            margin-left: 8px;
+            transform: translateY(2px);
+            background-image: url('../../assets/images/Fill1.svg');
+          }
+        }
+        .t-13 {
+          opacity: 0;
+          pointer-events: none;
+        }
+      }
+    }
+  }
+
+  .social a:not(:last-of-type) {
+    margin-right: 35px;
+  }
+  .social {
+    position: fixed;
+    left: -50px;
+    transform: translateY(-103px) rotate(-90deg);
+    transition: opacity ease-out .3s;
+    opacity: 0;
+    @media screen and (max-width: 780px) {
+      opacity: 0;
+    }
+  }
+  .start {
+    position: absolute;
+    right: 80px;
+    top: 120px;
+    margin-right: 20px;
+    transform: translateX(-600px);
+    opacity: 0;
+
+    @media screen and (max-width: 780px){
+      display: none;
+    }
+
+    img {
+      transform: translateY(7px);
+      width: 13px;
+      height: auto;
+      margin-left: 7px;
+      transition: transform ease-out .3s;
+    }
+
+    &:hover {
+      img {
+        transform: translateY(7px) scale(.7);
+      }
+    }
+  }
+}
+
+.img-pub {
+  height: 474px;
+  width: 77px;
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: cover;
+  position: absolute;
+  right: -100%;
+  -webkit-box-shadow: -7px 0px 41px 0px rgba(255, 255, 255, .3);
+  -moz-box-shadow: -7px 0px 41px 0px rgba(255, 255, 255, .3);
+  box-shadow: -7px 0px 41px 0px rgba(255, 255, 255, .3);
+  background-image: url('http://volkswagen-salon-de-provence.com/sites/default/files/images/VOLKSWAGEN/slider/slider-vo-mobile_0.jpg');
+  transition: top ease-out .3s;
+  @media screen and (min-width: 781px) {
+    top: 50%;
+    transform: translateY(-70%);
+  }
+  @media screen and (max-width: 780px) {
+    width: calc(100% - 250px);
+    height: 158px;
+    opacity: .75;
+    z-index: 1;
+    top: 360px;
+    @media screen and (max-height: 700px) {
+      top: 255px;
+    }
+  }
+}

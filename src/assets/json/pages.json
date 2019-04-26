@@ -1,0 +1,24 @@
+{
+  "pages": [
+    {
+      "title": "1er page",
+      "date": "20 janvier 2019",
+      "image": "image1.jpg"
+    },
+    {
+      "title": "2e page",
+      "date": "2 février 2019",
+      "image": "image2.jpg"
+    },
+    {
+      "title": "3e page",
+      "date": "10 mars 2019",
+      "image": "image3.jpg"
+    },
+    {
+      "title": "4e page",
+      "date": "12 mars 2019",
+      "image": "image4.jpg"
+    }
+  ]
+}

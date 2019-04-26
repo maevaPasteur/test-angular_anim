@@ -1,0 +1,66 @@
+.t-75 {
+  font-size: 75px;
+  line-height: 77px;
+  @media screen and (max-width: $desktop-small) {
+    font-size: 60px;
+    line-height: 65px;
+  }
+  @media screen and (max-width: 780px) {
+    font-size: 48px;
+    line-height: 47px;
+  }
+}
+.t-26 {
+  font-size: 26px;
+  letter-spacing: 1px;
+}
+.t-18 {
+  font-size: 18px;
+}
+.t-13 {
+  font-size: 13px;
+  letter-spacing: -.2px;
+}
+.t-10 {
+  font-size: 10.5px;
+}
+.t-12 {
+  font-size: 12px;
+}
+
+.tc {
+  text-align: center;
+}
+
+.t-b {
+  font-weight: 700;
+}
+
+.t-g {
+  color: $grey;
+}
+
+.t-dg {
+  color: $dark-grey;
+}
+
+.muli {
+  font-family: 'Muli', sans-serif;
+}
+.nexa {
+  font-family: 'Nexa', sans-serif;
+}
+
+h1:after {
+  display: inline-block;
+  border-radius: 50%;
+  content: '';
+  width: 5px;
+  height: 5px;
+  background-color: $red;
+  margin-left: 2px;
+}
+
+.b-g {
+  background-color: $grey;
+}
